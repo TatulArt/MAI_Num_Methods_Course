@@ -71,3 +71,7 @@ def vector_inf_norm(vector):
 
 def matrix_inf_norm(matrix):
     return max(sum(abs(value) for value in row) for row in matrix)
+
+
+def transpose(matrix):
+    return [list(column) for column in zip(*matrix)]
