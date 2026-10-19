@@ -63,3 +63,11 @@ def fmt_matrix(matrix, title=None, precision=6):
 def fmt_vector(vector, name="x", precision=6):
     return "\n".join(f"  {name}[{i + 1}] = {(0.0 if abs(value) < 5e-13 else value):.{precision}f}"
                      for i, value in enumerate(vector))
+
+
+def vector_inf_norm(vector):
+    return max(abs(value) for value in vector)
+
+
+def matrix_inf_norm(matrix):
+    return max(sum(abs(value) for value in row) for row in matrix)
